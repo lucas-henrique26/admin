@@ -11,17 +11,15 @@ export default function ForcarAutenticacao(props) {
     function renderizarConteudo() {
         return (
             <>
-                <Head>
-                    <script
-                        dangerouslySetInnerHTML={{
-                            __html: `
-                                if(!document.cookie?.includes("admin-template-cod3r-auth")) {
-                                    window.location.href = "/autenticacao"
-                                }
-                            `
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            if(!document.cookie?.includes("admin-template-cod3r-auth")) {
+                                window.location.href = "/autenticacao"
+                            }
+                        `
                         }}
                     />
-                </Head>
                 {props.children}
             </>
         )
